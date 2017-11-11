@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Web Design</title>
+  <link rel="stylesheet" href="reservation.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="reservation.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="brand">Bungallo Reservation</h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>Bungallo Reservation</h3>
+        <ul>
+          <li>44 Something st</li>
+          <li>06-30-418-6448</li>
+          <li>test@reservation.com</li>
+        </ul>
+        <div class="nav" role="navigation">
+          <a href="index.html" class="button"><i class="fa fa-home " aria-hidden="true"></i></a>
+          <a href="reservationList.html" class="button"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="reservation">
+        <h3>Reserve</h3>
+        <form>
+          <div class="input-group">
+            <label for="resortId"><i class="fa fa-building" aria-hidden="true"></i></label>
+            <input type="text" name="resortId" id="resortId" placeholder="Resort ID" required="required">
+          </div>
+          <div class="input-group">
+            <label for="clientName"><i class="fa fa-user" aria-hidden="true"></i></label>
+            <input type="text" name="clientName" id="clientName" placeholder="Client Name" required="required">
+          </div>
+          <div class="date-input-group">
+            <label for="startDate"><i class="fa fa-calendar" aria-hidden="true"></i></label>
+            <input class="date" type="date" name="startDate" id="startDate" placeholder="Start Date" required="required">
+            <span>From</span>
+          </div>
+          <div class="date-input-group">
+            <label for="endDate"><i class="fa fa-calendar" aria-hidden="true"></i></label>
+            <input class="date" type="date" name="endDate" id="endDate" placeholder="End Date" required="required">
+            <span>To</span>
+          </div>
+        </form>
+        <a class="submit-button">Submit</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
