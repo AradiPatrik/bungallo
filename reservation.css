@@ -1,215 +1,142 @@
-* {
+/*Global styles*/
+
+body {
+  background-image: url("images/background.jpg");
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eeeeee;
   box-sizing: border-box;
 }
 
-body {
-  background-image: url(./images/background.jpg);
-  color: #ddd;
-  line-height: 1.6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 1em;
-}
-
-.container {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-}
-
 ul {
-  list-style: none;
-  padding: 0;
+  list-style-type: none;
+}
+
+* {
+  margin: 0;
 }
 
 a {
-  color: #eeeeee;
   text-decoration: none;
+  color: inherit;
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+
+/*brand*/
 
 .brand {
+  font-weight: lighter;
+  font-size: 4em;
   text-align: center;
+  margin-bottom: 10px;
 }
 
-.wrapper {
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
-}
-
-.wrapper>* {
-  padding: 1em;
-}
-
-.company-info {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.company-info h3,
-.company-info ul {
-  text-align: center;
-  margin: 0 0 1rem 0;
-}
-
-.company-info .nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
-  grid-gap: 1em;
-}
-
-.company-info .nav .button {
-  background: rgba(0, 0, 0, 0.3);
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
   padding: 10px;
-  border-radius: 10px;
+}
+
+
+/* card */
+
+.card {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .8);
+}
+
+.card>* {
+  padding: 10px;
+}
+
+
+/* card header */
+
+#card-title {
   font-size: 1.5em;
-  transition: ease-in-out 0.5s;
-  color: #eeeeee;
-  border: none;
 }
 
-.company-info .nav .button:hover,
-.company-info .nav .button:focus {
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  outline: none;
-}
-
-.reservation {
-  background: rgba(0, 0, 0, 0.1);
-}
-
-
-/* Form Styles*/
-
-.reservation form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
-  grid-auto-rows: minmax(2em, auto);
-}
-
-.reservation form input,
-.reservation form input:active,
-.reservation form input:focus {
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+.card-header {
+  background-color: rgba(0, 0, 0, 0.3);
   text-align: center;
-  color: #aaaaaa;
-  border-radius: 10px;
-  outline: none;
-  font-size: 1.2em;
 }
 
-.reservation form .input-group {
-  display: grid;
-  grid-template-columns: 1fr 10fr;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
-  transition: ease-in-out 0.5s;
-}
-
-.reservation form .input-group label {
-  float: right;
+.nav-button {
+  flex-grow: 1;
   background: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  justify-content: center;
-  padding-top: 3px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-}
-
-.reservation form .date-input-group {
-  display: grid;
-  grid-template-columns: 1fr 8fr 2fr;
-  border-radius: 10px;
-  transition: ease-in-out 0.5s;
-}
-
-.reservation form .date-input-group input {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0px;
-  transition: ease-in-out 0.5s;
-}
-
-.reservation form .date-input-group span {
-  float: right;
-  background: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  padding-top: 3px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.reservation form .date-input-group label {
-  float: right;
-  background: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  justify-content: center;
-  padding-top: 3px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  transition: ease-in-out 0.5s;
-}
-
-.date-input-group input:hover,
-.date-input-group label:hover {
-  cursor: pointer;
-  color: white;
-  transition: ease-in-out 0.5s;
-}
-
-.date-input-group span:hover {
-  cursor: default;
-}
-
-input::-webkit-inner-spin-button {
-  display: none;
-}
-
-input::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-input::-webkit-datetime-edit-year-field:focus,
-input::-webkit-datetime-edit-month-field:focus,
-input::-webkit-datetime-edit-day-field:focus {
-  background: transparent;
-  color: #aaaaaa;
-}
-
-.reservation .submit-button {
-  color: #eeeeee;
-  font-weight: bolder;
-  text-align: center;
+  font-size: 1.3em;
   padding: 10px;
-  margin-top: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  border: 0;
-  border-radius: 10px;
-  width: 100%;
-  transition: ease-in-out 0.5s;
-  margin-top: 24px;
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
-.reservation .submit-button:hover {
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
-}
-
-.reservation .submit-button:focus {
-  outline: none;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
+.nav-button:hover {
   color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .8);
 }
 
-.reservation {
+
+/* card body */
+
+.card-body {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#card-body-title {
   text-align: center;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 1.5em;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1.5em;
+}
+
+.input-field {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.1);
+  color: #ccc;
+}
+
+.input-field:not(:first-child) {
+  border-left: 0;
+}
+
+.input-field:not(:last-child) {
+  border-right: 0;
+}
+
+.input-addon {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font: inherit;
+  font-weight: normal;
+}
+
+.input-field,
+.input-addon {
+  border: 1px solid rgba(147, 128, 108, 0.25);
+  padding: 0.5em 0.75em;
+}
+
+.input-field:first-child,
+.input-addon:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.input-field:last-child,
+.input-addon:last-child {
+  border-radius: 0 5px 5px 0;
 }
 
 
@@ -219,11 +146,12 @@ input::-webkit-datetime-edit-day-field:focus {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0px 0px 120px 0px rgba(0, 0, 0, 0.5);
   min-width: 30%;
+  color: white;
 }
 
 .ui-datepicker a {
   text-decoration: none;
-  color: #aaaaaa;
+  color: #eeeeee;
 }
 
 .ui-datepicker-inline {
@@ -236,7 +164,7 @@ input::-webkit-datetime-edit-day-field:focus {
 
 .ui-datepicker-header {
   padding-bottom: 10px;
-  background: rgb(35, 40, 30);
+  background: rgb(17, 27, 16);
 }
 
 .ui-datepicker-prev {
@@ -246,6 +174,12 @@ input::-webkit-datetime-edit-day-field:focus {
 .ui-datepicker-next,
 .ui-datepicker-prev {
   padding: 10px;
+  cursor: pointer;
+}
+
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover {
+  color: white;
 }
 
 .ui-datepicker-next {
@@ -280,25 +214,20 @@ input::-webkit-datetime-edit-day-field:focus {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .8);
 }
 
-@media(max-width: 640px) {
-  .wrapper form {
-    grid-template-columns: 1fr;
-  }
-  .ui-datepicker {
-    width: 50%;
-  }
-  .ui-datepicker-calendar {
-    background: #333333;
-  }
-}
+@media(max-width: 640px) {}
 
 @media(min-width: 1000px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+  .card-header {
+    float: left;
+    height: 200px;
+    flex-grow: 1;
   }
-  .wrapper .company-info {
-    align-self: center;
-    height: 100%;
+  .card-body {
+    float: left;
+    height: 200px;
+    flex-grow: 3;
+  }
+  .card {
+    display: flex;
   }
 }
