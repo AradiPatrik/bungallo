@@ -1,0 +1,172 @@
+.message {
+  display: none;
+}
+
+body {
+  background-image: url("images/background.jpg");
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eeeeee;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+i {
+  padding: 3px;
+  margin-right: 1px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+.button {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .8);
+}
+
+.brand {
+  font-weight: lighter;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/*List*/
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.list-group-item {
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.list-group-item:first-child {
+  border-top: 1px solid grey;
+  margin-top: 0px;
+}
+
+.field {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: start;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+#resource-id {
+  flex-grow: 0.1;
+}
+
+#building-id {
+  flex-grow: 0.1;
+}
+
+.field>* {
+  padding: 10px;
+}
+
+.row:last-child .field:last-child {
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.add-on {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media(min-width: 1001px) {
+  .list-group-item {
+    flex-direction: row;
+  }
+  .field {
+    box-shadow: none;
+  }
+  .list-group-item:last-child {
+    border-bottom: none;
+  }
+  a>.field {
+    border-right: none;
+  }
+}
+
+@media(max-width: 1000px) {
+  .list-group-item:last-child {
+    border-bottom: none;
+  }
+  .field:last-child {
+    border-right: none;
+  }
+}
+
+@media(min-width: 641px) {
+  .hidden-lg {
+    display: none;
+  }
+}
+
+@media(max-width: 640px) {
+  .hidden-xs {
+    display: none;
+  }
+  #resource-id {
+    flex-grow: 1;
+    border-right: none;
+  }
+  #building-id {
+    flex-grow: 1;
+    flex-direction: row-reverse;
+  }
+}
