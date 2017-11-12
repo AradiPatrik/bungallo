@@ -29,6 +29,10 @@ a {
   color: inherit;
 }
 
+hr {
+  margin-bottom: 20px
+}
+
 i {
   padding: 3px;
   margin-right: 1px;
@@ -50,6 +54,7 @@ p {
   background: rgba(0, 0, 0, 0.3);
   padding: 10px;
   margin: 5px;
+  margin-right: 20px;
   border-radius: 5px;
 }
 
@@ -146,6 +151,12 @@ p {
   a>.field {
     border-right: none;
   }
+  .field:nth-child(1) {
+    flex-grow: 1;
+  }
+  .field:nth-child(2)
+      flex-grow: 2;
+  }
 }
 
 @media(max-width: 1000px) {
@@ -155,6 +166,7 @@ p {
   .field:last-child {
     border-right: none;
   }
+
 }
 
 @media(min-width: 641px) {

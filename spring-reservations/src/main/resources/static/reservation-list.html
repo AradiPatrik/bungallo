@@ -22,7 +22,10 @@
 
 <h1 class="brand">List of reservations</h1>
 <hr>
-
+<div class="container">
+    <a href="index.html" class="button"><i class="fa fa-home"></i></a>
+    <a href="reservation.html" class="button"><i class="fa fa-book"></i></a>
+</div>
 <div class="container">
     <ul class="list-group" id="reservation-list">
         <!-- the content will be placed here -->
@@ -43,7 +46,7 @@
               <span class="add-on">
                     <i class="fa fa-book " aria-hidden="true"></i>
                 </span>
-                <p>{{resourceId}}</p>
+                <p>{{id}}</p>
             </div>
             <div class="field hidden-xs">
               <span class="add-on">
@@ -55,7 +58,7 @@
               <span class="add-on">
                   <i class="fa fa-building" aria-hidden="true"></i>
                 </span>
-                <p>{{id}}</p>
+                <p>{{resourceId}}</p>
             </div>
         </div>
         <div class="row">

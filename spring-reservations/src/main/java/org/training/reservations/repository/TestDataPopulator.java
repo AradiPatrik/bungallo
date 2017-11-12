@@ -41,5 +41,26 @@ public class TestDataPopulator {
         s1.setEndDate(to.getTime());
         s1.setOwner("Mary");
         repository.save(s1);
+
+        Reservation s2 = new Reservation();
+        s2.setResourceId((long) 33);
+        s2.setStartDate(from.getTime());
+        s2.setEndDate(to.getTime());
+        s2.setOwner("Aradi Patrik");
+        repository.save(s2);
+
+        Reservation s3 = new Reservation();
+        s3.setResourceId((long) 25);
+        s3.setStartDate(from.getTime());
+        s3.setEndDate(to.getTime());
+        s3.setOwner("Katy Perry");
+        repository.save(s3);
+
+        Reservation s4 = new Reservation();
+        s4.setResourceId((long) 22);
+        s4.setStartDate(from.getTime());
+        s4.setEndDate(to.getTime());
+        s4.setOwner("Eminem");
+        repository.save(s4);
     }
 }
