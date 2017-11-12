@@ -4,7 +4,7 @@ body {
   background-image: url("images/background.jpg");
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #eeeeee;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 ul {
@@ -25,6 +25,20 @@ a {
   flex-direction: row;
   padding: 5px;
   justify-content: space-around;
+}
+
+.button {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  width: 50px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .8);
 }
 
 
@@ -69,18 +83,7 @@ a {
 
 .nav-button {
   flex-grow: 1;
-  background: rgba(0, 0, 0, 0.3);
   font-size: 1.3em;
-  padding: 10px;
-  width: 50px;
-  height: 30px;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-.nav-button:hover {
-  color: white;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .8);
 }
 
 
@@ -88,13 +91,29 @@ a {
 
 .card-body {
   background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 #card-body-title {
+  flex-grow: 1;
   text-align: center;
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 1.5em;
+}
+
+#form-container {
+  flex-grow: 6;
+}
+
+#left-column {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+#right-column {
+  flex-grow: 1;
 }
 
 .input-group {
@@ -139,14 +158,21 @@ a {
   border-radius: 0 5px 5px 0;
 }
 
+#submit-button {
+  width: 96%;
+  text-align: center;
+}
+
 
 /*date picker stuff*/
 
 .ui-datepicker {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0px 0px 120px 0px rgba(0, 0, 0, 0.5);
-  min-width: 30%;
+  min-width: 40%;
   color: white;
+  transform: translate(-5px);
+  border-radius: 5px;
 }
 
 .ui-datepicker a {
@@ -214,17 +240,34 @@ a {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .8);
 }
 
-@media(max-width: 640px) {}
+@media(max-width: 640px) {
+  #form-container {
+    display: block;
+  }
+  #form-container>* {
+    width: 100%;
+  }
+  .ui-datepicker-calendar {
+    background: rgb(150, 150, 150)
+  }
+  .ui-datepicker {
+    width: 70%;
+  }
+}
 
 @media(min-width: 1000px) {
   .card-header {
-    float: left;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    min-height: 230px;
     flex-grow: 1;
   }
+  .card-header>* {
+    flex-grow: 1;
+    margin: 10px;
+  }
   .card-body {
-    float: left;
-    height: 200px;
+    min-height: 230px;
     flex-grow: 3;
   }
   .card {

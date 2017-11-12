@@ -26,13 +26,13 @@
           <li>test@reservation.com</li>
         </ul>
         <div class="flex-container" role="navigation">
-          <a href="index.html" class="nav-button"><i class="fa fa-home " aria-hidden="true"></i></a>
-          <a href="reservationList.html" class="nav-button"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+          <a href="index.html" class="button nav-button"><i class="fa fa-home " aria-hidden="true"></i></a>
+          <a href="reservationList.html" class="button nav-button"><i class="fa fa-calendar" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="card-body">
         <h3 id="card-body-title">Reserve</h3>
-        <form class="flex-container">
+        <form class="flex-container" id="form-container">
           <div id="left-column">
             <div class="input-group">
               <label for="resortId" class="input-addon"><i class="fa fa-building" aria-hidden="true"></i></label>
@@ -46,17 +46,17 @@
           <div id="right-column">
             <div class="input-group">
               <label for="startDate" class="input-addon"><i class="fa fa-calendar" aria-hidden="true"></i></label>
-              <input class="datepicker input-field" type="form-control" name="startDate" id="startDate" placeholder="Start Date" required="required">
+              <input class="datepicker input-field" type="form-control" name="startDate" id="startDate" placeholder="Start Date" readonly="readonly" required="required">
               <span class="input-addon">From</span>
             </div>
             <div class="input-group">
               <label for="endDate" class="input-addon"><i class="fa fa-calendar" aria-hidden="true"></i></label>
-              <input class="datepicker input-field" type="form-control" name="endDate" id="endDate" placeholder="End Date" required="required">
+              <input class="datepicker input-field" type="form-control" name="endDate" id="endDate" placeholder="End Date" readonly="readonly" required="required">
               <span class="input-addon">To</span>
             </div>
           </div>
         </form>
-        <a href="#" class="submit-button">Submit</a>
+        <a href="#" class="button" id="submit-button">Submit</a>
       </div>
     </div>
   </div>
