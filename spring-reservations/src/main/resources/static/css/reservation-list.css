@@ -1,9 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+.message {
+    display: none;
+}
+
 .message {
   display: none;
 }
 
 body {
-  background-image: url("images/background.jpg");
+  background-image: url("../images/background.jpg");
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #eeeeee;
 }

@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Responsive Web Design</title>
-  <link rel="stylesheet" href="reservation.css">
+  <link rel="stylesheet" href="css/reservation.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="reservation.js"></script>
+  <script src="js/reservation.js"></script>
 </head>
 
 <body>
@@ -28,6 +28,12 @@
         <div class="flex-container" role="navigation">
           <a href="index.html" class="button nav-button"><i class="fa fa-home " aria-hidden="true"></i></a>
           <a href="reservationList.html" class="button nav-button"><i class="fa fa-calendar" aria-hidden="true"></i></a>
+        </div>
+        <div id="validation-error" class="message">Reservation failed - please check your input for completeness.</div>
+        <div id="conflict-error" class="message">The room is already reserved for this period, please choose a different period.</div>
+        <div id="system-error" class="message">Reservation failed - please try again later.</div>
+        <div id="reservation-successful-message" class="message">
+          Your reservation has been successfully processed. Your reservation id is: <span id="reservationId" />.
         </div>
       </div>
       <div class="card-body">

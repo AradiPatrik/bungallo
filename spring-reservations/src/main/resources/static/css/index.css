@@ -1,7 +1,7 @@
 /*Global styles*/
 
 body {
-  background-image: url("images/vibrant-background.jpg");
+  background-image: url("../images/vibrant-background.jpg");
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #eeeeee;
   box-sizing: content-box;
