@@ -52,7 +52,6 @@ fabric.properties
 .idea/encodings.xml
 .idea/misc.xml
 .idea/modules.xml
-pom.xml
 service-description.pdf
 spring-reservations.iml
 target/
